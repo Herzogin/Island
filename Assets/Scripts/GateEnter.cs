@@ -26,7 +26,7 @@ public class GateEnter : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("FlyingSpheres");
 
         }
     }
