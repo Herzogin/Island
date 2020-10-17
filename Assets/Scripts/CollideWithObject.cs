@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CollideWithObject : MonoBehaviour
 {
-    public GameObject destroyedGameObject;
+    ParticleSystem exp;
+    //public GameObject destroyedGameObject;
     // Start is called before the first frame update
     void Start()
     {
-        
+       exp = GetComponent<ParticleSystem>();
+        exp.Stop();
     }
 
     // Update is called once per frame
@@ -19,11 +21,13 @@ public class CollideWithObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        print("triggered, Position: " + transform.position);
         if (other.tag == "Player")
         {
-
-            destroyedGameObject.SetActive(false);
-        }
+            print("Player triggered");
+            //destroyedGameObject.SetActive(false);
+            //GetComponent<Rigidbody>().useGravity = true;
+            exp.Play();
+        }//else if (other.tag == "Cube")
     }
 }
