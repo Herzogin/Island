@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 8e81a29041c798c46b69ad916c5d0492
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: d5ebba38ce0ea5045a2fbecca8fb7770
+    path: Assets/Scenes/JumpingPlanes.unity
+    guid: d3b04e0b00be7d34983b3dd3637e7b2f
+  - enabled: 1
+    path: Assets/Scenes/FlyingSpheres.unity
+    guid: 0f1373f9f0cf74444af9685a23368f82
   m_configObjects: {}
