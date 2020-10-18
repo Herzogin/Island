@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectFliesRandomly : MonoBehaviour
 {
     private bool stopped = false;
-    private float speed = 2.0f;
+    private float speed = 10.0f;
     private float pause = 2.0f;
     
 
@@ -14,9 +14,9 @@ public class ObjectFliesRandomly : MonoBehaviour
         if (!stopped)
         {
             stopped = true;
-            float randomX = Random.Range(230.0f, 260.0f);
-            float randomY = Random.Range(36.0f, 39.0f);
-            float randomZ = Random.Range(225.0f, 250.0f);
+            float randomX = Random.Range(240.0f, 250.0f);
+            float randomY = Random.Range(13.0f, 18.0f);
+            float randomZ = Random.Range(218.0f, 227.0f);
             StartCoroutine(FliesToTarget(new Vector3(randomX, randomY, randomZ)));
         }
     }
