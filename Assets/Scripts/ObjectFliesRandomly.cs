@@ -4,26 +4,38 @@ using UnityEngine;
 
 public class ObjectFliesRandomly : MonoBehaviour
 {
+    public float minimumX;
+    public float maximumX;
+    public float minimumAltitude;
+    public float maximumAltitude;
+    public float minimumZ;
+    public float maximumZ;
     private bool stopped = false;
-    private float speed = 10.0f;
+    private float speed = 1.0f;
     private float pause = 2.0f;
-    
 
+    private void Start()
+    {
+        print("min X: " + minimumX);
+        print("max X: " + maximumX);
+        print("min Alti: " + minimumAltitude);
+        print("max Alti: " + maximumAltitude);
+        print("min Z: " + minimumZ);
+        print("max Z: " + maximumZ);
+    }
     void Update()
     {
+        
         if (!stopped)
         {
             stopped = true;
-            float randomX = Random.Range(240.0f, 250.0f);
-            float randomY = Random.Range(13.0f, 18.0f);
-            float randomZ = Random.Range(218.0f, 227.0f);
-            StartCoroutine(FliesToTarget(new Vector3(randomX, randomY, randomZ)));
+            StartCoroutine(FliesToTarget(randomVector3InRange()));
         }
     }
 
     private IEnumerator FliesToTarget(Vector3 target)
     {
-        speed = Random.Range(10.0f, 20.0f); 
+        speed = Random.Range(10.0f, 20.0f);
         pause = Random.Range(3.0f, 5.0f);
         float timer = 0.0f;
         Vector3 origin = transform.position;
@@ -39,6 +51,16 @@ public class ObjectFliesRandomly : MonoBehaviour
         }
 
         yield return new WaitForSeconds(pause);
+
         stopped = false;
+    }
+
+    Vector3 randomVector3InRange()
+    {
+        float randomX = Random.Range(minimumX, maximumX);
+        float randomY = Random.Range(minimumAltitude, maximumAltitude); 
+        float randomZ = Random.Range(minimumZ, maximumZ);
+
+        return new Vector3(randomX, randomY, randomZ);
     }
 }
