@@ -14,10 +14,10 @@ public class ObjectRunsRandomly : MonoBehaviour
         if (!stopped)
         {
             stopped = true;
-            float randomX = Random.Range(230.0f, 260.0f);
+            float randomX = Random.Range(235.0f, 255.0f);
             //float randomY = Random.Range(36.0f, 39.0f);
-            float randomZ = Random.Range(225.0f, 250.0f);
-            StartCoroutine(FliesToTarget(new Vector3(randomX, 36.42f, randomZ)));
+            float randomZ = Random.Range(217.0f, 227.0f);
+            StartCoroutine(FliesToTarget(new Vector3(randomX, 13.0f, randomZ)));
         }
     }
 

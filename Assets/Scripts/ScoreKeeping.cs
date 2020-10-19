@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class ScoreKeeping : MonoBehaviour
 {
+    public GameObject Gate;
     public static int Score = 0;
-    // Start is called before the first frame update
+    public int highscore = 0;
+    bool hitHighscore = false;
+
     void Start()
     {
         print("loaded ScoreKeeping");
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Score == highscore && !hitHighscore)
+        {
+            Gate.SetActive(true);
+            FindObjectOfType<AudioManager>().PlayAudio("Gate");
+            hitHighscore = true;
+        }
     }
 
     void OnGUI()
     {
-        GUI.Box(new Rect(100, 100, 100, 100), "Score: "+ Score.ToString());
+        GUI.Box(new Rect(100, 100, 100, 100), "Score: " + Score.ToString());
     }
+
 }
