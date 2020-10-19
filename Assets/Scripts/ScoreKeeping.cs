@@ -5,13 +5,16 @@ using UnityEngine;
 public class ScoreKeeping : MonoBehaviour
 {
     public GameObject Gate;
+    [SerializeField] private Animator animatorGate;
+
     public static int Score = 0;
     public int highscore = 0;
     bool hitHighscore = false;
-
+    
     void Start()
     {
         print("loaded ScoreKeeping");
+        animatorGate = Gate.GetComponent<Animator>();
     }
 
     void Update()
@@ -20,6 +23,7 @@ public class ScoreKeeping : MonoBehaviour
         {
             Gate.SetActive(true);
             FindObjectOfType<AudioManager>().PlayAudio("Gate");
+            animatorGate.SetBool("gateAppears", true);
             hitHighscore = true;
         }
     }
