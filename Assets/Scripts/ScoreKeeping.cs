@@ -30,7 +30,7 @@ public class ScoreKeeping : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Box(new Rect(100, 100, 100, 100), "Score: " + Score.ToString());
+        GUI.Box(new Rect(20, 20, 100, 20), "Score: " + Score.ToString());
     }
 
 }

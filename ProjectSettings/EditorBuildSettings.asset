@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_FlyingSpheres.unity
     guid: 0f1373f9f0cf74444af9685a23368f82
+  - enabled: 1
+    path: Assets/Scenes/3_Finish.unity
+    guid: d5ebba38ce0ea5045a2fbecca8fb7770
   m_configObjects: {}
