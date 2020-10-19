@@ -16,12 +16,7 @@ public class ObjectFliesRandomly : MonoBehaviour
 
     private void Start()
     {
-        //print("min X: " + minimumX);
-        //print("max X: " + maximumX);
-        //print("min Alti: " + minimumAltitude);
-        //print("max Alti: " + maximumAltitude);
-        //print("min Z: " + minimumZ);
-        //print("max Z: " + maximumZ);
+        
     }
     void Update()
     {

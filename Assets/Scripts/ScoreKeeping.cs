@@ -15,6 +15,7 @@ public class ScoreKeeping : MonoBehaviour
     {
         print("loaded ScoreKeeping");
         animatorGate = Gate.GetComponent<Animator>();
+        
     }
 
     void Update()
@@ -30,7 +31,15 @@ public class ScoreKeeping : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Box(new Rect(20, 20, 100, 20), "Score: " + Score.ToString());
+        // Create style 
+        GUIStyle fontStyle = new GUIStyle(GUI.skin.box);
+        fontStyle.fontSize = 40;
+        // Load and set Font
+        Font font = (Font)Resources.Load("Fonts/comic", typeof(Font));
+        fontStyle.font = font;
+        // Set color 
+        fontStyle.normal.textColor = Color.white;
+        // use style 
+        GUI.Box(new Rect(20, 20, 200, 50), "Score: " + Score.ToString(), fontStyle);
     }
-
 }
