@@ -11,17 +11,17 @@ public class ObjectFliesRandomly : MonoBehaviour
     public float minimumZ;
     public float maximumZ;
     private bool stopped = false;
-    private float speed = 1.0f;
+    public float speed = 1.0f;
     private float pause = 2.0f;
 
     private void Start()
     {
-        print("min X: " + minimumX);
-        print("max X: " + maximumX);
-        print("min Alti: " + minimumAltitude);
-        print("max Alti: " + maximumAltitude);
-        print("min Z: " + minimumZ);
-        print("max Z: " + maximumZ);
+        //print("min X: " + minimumX);
+        //print("max X: " + maximumX);
+        //print("min Alti: " + minimumAltitude);
+        //print("max Alti: " + maximumAltitude);
+        //print("min Z: " + minimumZ);
+        //print("max Z: " + maximumZ);
     }
     void Update()
     {

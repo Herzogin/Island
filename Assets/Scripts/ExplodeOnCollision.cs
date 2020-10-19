@@ -4,30 +4,15 @@ using UnityEngine;
 
 public class ExplodeOnCollision : MonoBehaviour
 {
-    ParticleSystem exp;
-    //public GameObject destroyedGameObject;
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        exp = GetComponent<ParticleSystem>();
-        exp.Stop();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        print("triggered, Position: " + transform.position);
-        if (other.tag == "Player")
+        if (collision.transform.name == "ThirdPersonController")
         {
-            print("Player triggered");
-            //destroyedGameObject.SetActive(false);
-            //GetComponent<Rigidbody>().useGravity = true;
-            exp.Play();
-        }//else if (other.tag == "Cube")
+            ScoreKeeping.Score =0;
+            FindObjectOfType<AudioManager>().PlayAudio("BallExplode");
+            
+            Destroy(gameObject);
+
+        }
     }
 }
