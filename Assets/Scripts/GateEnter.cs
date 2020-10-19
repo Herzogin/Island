@@ -7,31 +7,42 @@ using UnityEngine.SceneManagement;
 
 public class GateEnter : MonoBehaviour
 {
+    
+    public int SceneNumber;
+    string Scene;
     void Start()
     {
         print("gate enter loaded");
+
+        if (SceneNumber == 0)
+        {
+            Scene = "0_Start";
+        }
+        else if (SceneNumber == 1)
+        {
+            Scene = "1_FlyingSpheres";
+        }
+        else if (SceneNumber == 2)
+        {
+            Scene = "2_JumpingPlatforms";
+        }
+        else if (SceneNumber == 3)
+        {
+            Scene = "3_Finish";
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     private void OnTriggerEnter(Collider other)
     {
-        //print("inside OnTrigger");
-        //SceneManager.LoadScene("SampleScene");
+       
 
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("FlyingSpheres");
+            SceneManager.LoadScene(Scene);
 
         }
     }
 
-    //private void SwitchScene(int sceneNumber)
-    //{
-    //    SceneManager.LoadScene("SampleScene");
-    //}
+    
 }
