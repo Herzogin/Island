@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ExplodeOnCollision : MonoBehaviour
 {
@@ -10,9 +8,7 @@ public class ExplodeOnCollision : MonoBehaviour
         {
             ScoreKeeping.Score =0;
             FindObjectOfType<AudioManager>().PlayAudio("BallExplode");
-            
             Destroy(gameObject);
-
         }
     }
 }

@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterStaysOnObject : MonoBehaviour
 {
-
     public GameObject Player;
-    [SerializeField] private Animator animatorPlatform;
+    [SerializeField] 
+    private Animator animatorPlatform;
      
-
     void Start()
     {
         animatorPlatform = GetComponent<Animator>();
-        
     }
     void OnTriggerEnter(Collider other)
     {
@@ -31,27 +27,4 @@ public class CharacterStaysOnObject : MonoBehaviour
             animatorPlatform.SetBool("CharacterOnPlatform", false);
         }
     }
-
-   
-
 }
-
-//    //public CharacterController player;
-
-//    void OnCollisionEnter(Collision other)
-//    {
-//        if (other.gameObject.tag == "Player")
-//        {
-//            other.collider.transform.SetParent(transform);
-//        }
-        
-//    }
-
-//    void OnCollisionExit(Collision other)
-//    {
-//        if (other.gameObject.tag == "Player")
-//        {
-//            other.collider.transform.SetParent(null);
-//        }
-//    }
-//}

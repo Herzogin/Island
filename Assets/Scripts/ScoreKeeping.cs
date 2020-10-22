@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScoreKeeping : MonoBehaviour
 {
     public GameObject Gate;
-    [SerializeField] private Animator animatorGate;
+    [SerializeField] 
+    private Animator animatorGate;
 
     public static int Score = 0;
     public int highscore = 0;
@@ -13,9 +12,7 @@ public class ScoreKeeping : MonoBehaviour
     
     void Start()
     {
-        print("loaded ScoreKeeping");
         animatorGate = Gate.GetComponent<Animator>();
-        
     }
 
     void Update()

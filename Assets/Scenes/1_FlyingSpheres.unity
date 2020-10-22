@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gate: {fileID: 457614313}
   animatorGate: {fileID: 457614314}
-  highscore: 3
+  highscore: 5
 --- !u!4 &83178350
 Transform:
   m_ObjectHideFlags: 0

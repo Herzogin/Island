@@ -1,7 +1,5 @@
-﻿using UnityEngine.Audio;
-using UnityEngine;
+﻿using UnityEngine;
 
-//To make the custom class appear in the Unity editor, it has to be Serializable
 [System.Serializable]
 public class Audio
 {

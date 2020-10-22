@@ -504,6 +504,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock gate
       objectReference: {fileID: 0}
+    - target: {fileID: 409004597593660076, guid: 4edb21bf5e3a68a40920be6ca931fe34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 409004597593660078, guid: 4edb21bf5e3a68a40920be6ca931fe34,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectFliesRandomly : MonoBehaviour
@@ -14,13 +13,8 @@ public class ObjectFliesRandomly : MonoBehaviour
     public float speed = 1.0f;
     private float pause = 2.0f;
 
-    private void Start()
-    {
-        
-    }
     void Update()
     {
-        
         if (!stopped)
         {
             stopped = true;
@@ -46,7 +40,6 @@ public class ObjectFliesRandomly : MonoBehaviour
         }
 
         yield return new WaitForSeconds(pause);
-
         stopped = false;
     }
 

@@ -1,11 +1,10 @@
-﻿using UnityEngine.Audio;
-using System;
+﻿using System;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
     public Audio[] audios;
-    // Start is called before the first frame update
+    
     void Awake()
     {
         foreach (Audio a in audios)

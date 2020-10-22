@@ -1,19 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GateEnter : MonoBehaviour
 {
-    
     public int SceneNumber;
     string Scene;
     void Start()
     {
-        print("gate enter loaded");
-
         if (SceneNumber == 0)
         {
             Scene = "0_Start";
@@ -32,17 +25,11 @@ public class GateEnter : MonoBehaviour
         }
     }
 
-    
     private void OnTriggerEnter(Collider other)
     {
-       
-
         if (other.tag == "Player")
         {
             SceneManager.LoadScene(Scene);
-
         }
     }
-
-    
 }

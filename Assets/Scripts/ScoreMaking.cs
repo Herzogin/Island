@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScoreMaking : MonoBehaviour
 {
-  
     void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.name == "ThirdPersonController")
@@ -12,7 +9,6 @@ public class ScoreMaking : MonoBehaviour
             ScoreKeeping.Score += 1;
             FindObjectOfType<AudioManager>().PlayAudio("BallCatch");
             Destroy(gameObject);
-
         }
     }
 }
